@@ -2,7 +2,7 @@
 {
     internal class Program
     {
-        //V2.0 - Gerar numero secreto aleatório
+        //V3.0 - Gerar numero secreto aleatório
         static void Main(string[] args)
         {
             Console.WriteLine("-------------------------------------");
@@ -18,10 +18,25 @@
             Console.Write("Digite um numero (de 1 à 20) para chutar: ");
             int numeroDigitado = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Você digitou o número: " + numeroDigitado);
-            Console.WriteLine("O numero secreto é: " + numeroSecreto);
-
-            Console.ReadLine();
+            if (numeroDigitado == numeroSecreto)
+            {
+                Console.WriteLine("-------------------------------------");
+                Console.WriteLine("Parabéns, você acertou!");
+                Console.WriteLine("-------------------------------------");
+            }
+            else if(numeroDigitado > numeroSecreto)
+            {
+                Console.WriteLine("-------------------------------------");
+                Console.WriteLine("O numero digitado foi maior que o numero secreto!");
+                Console.WriteLine("-------------------------------------");
+            }
+            else
+            {
+                Console.WriteLine("-------------------------------------");
+                Console.WriteLine("O numero digitado foi menor que o numero secreto!");
+                Console.WriteLine("-------------------------------------");
+            }
+                Console.ReadLine();
         }
     }
 }
