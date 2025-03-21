@@ -14,9 +14,9 @@
                 //escolha de dificuldade
                 Console.WriteLine("Escolha um nivel de dificuldade:");
                 Console.WriteLine("-------------------------------------");
-                Console.WriteLine("1 - Fácil  (10 tentativas)");
-                Console.WriteLine("2 - Normal (5 tentativas)");
-                Console.WriteLine("2 - Dicil  (3 tentativas)");
+                Console.WriteLine("1 - Fácil    (10 tentativas)");
+                Console.WriteLine("2 - Normal   (5 tentativas)");
+                Console.WriteLine("3 - Dificil  (3 tentativas)");
                 Console.WriteLine("-------------------------------------");
 
                 Console.Write("Digite sua escolha: ");
@@ -24,7 +24,24 @@
 
                 int totalDeTentativas = 0;
 
-                if (escolhaDeDificuldade == "1")
+                switch
+                    (escolhaDeDificuldade)
+                {
+                    case "1":
+                        totalDeTentativas = 10;
+                        break;
+                    case "2":
+                        totalDeTentativas = 5;
+                        break;
+                    case "3":
+                        totalDeTentativas = 3;
+                        break;
+                    default:
+                        totalDeTentativas = 10;
+                        break;
+                }
+
+                /*if (escolhaDeDificuldade == "1")
                 {
                     totalDeTentativas = 10;
                 }
@@ -35,7 +52,7 @@
                 else
                 {
                     totalDeTentativas = 3;
-                }
+                }*/
 
 
 
@@ -74,7 +91,7 @@
                         Console.WriteLine("O numero digitado foi menor que o numero secreto!");
                         Console.WriteLine("-------------------------------------");
                     }
-                    Console.WriteLine("Deseja Continuar? (S/N");
+                    Console.WriteLine("Deseja Continuar? (S/N)");
                     string opcaoContinuar = Console.ReadLine().ToUpper();
                     if (opcaoContinuar == "S")
                     {
