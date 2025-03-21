@@ -41,7 +41,6 @@
 
                 //escolha numero aleatório
                 Random geradorDeNumeros = new Random();
-
                 int numeroSecreto = geradorDeNumeros.Next(1, 21);
 
 
