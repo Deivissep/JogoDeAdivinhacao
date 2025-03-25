@@ -60,6 +60,10 @@
                 Random geradorDeNumeros = new Random();
                 int numeroSecreto = geradorDeNumeros.Next(1, 21);
 
+                int pontuacao = 1000;
+                List<int> numerosDigitados = new List<int>();
+
+
 
 
                 //lógica do jogo
@@ -95,11 +99,13 @@
                     string opcaoContinuar = Console.ReadLine().ToUpper();
                     if (opcaoContinuar == "S")
                     {
-                        break;
+                        
                     }
+
 
                     Console.WriteLine("Pressione ENTER para continuar...");
                     Console.ReadLine();
+                    Console.Clear();
                 }
             
             }
